@@ -27,11 +27,15 @@ class empleadoController {
 
   // Acción: editar un empleado (recibe ID por parámetro o por $_GET)
   public function edit($id = null) {
-    $this->page_title = 'Editar empleado';
+    $this->page_title = 'Nuevo empleado';
     $this->view = 'edit_empleado';
     if (isset($_GET['id'])) $id = (int)$_GET['id']; // si viene por GET, se castea a entero
     // si hay ID → busca al empleado, sino devuelve array vacío
-    return $id ? $this->empleado->getEmployeeById($id) : []; 
+    if ($id) {
+      $this->page_title = 'Editar empleado';
+      return $this->empleado->getEmployeeById($id);
+    }
+    else return []; 
   }
 
   // Acción: guardar un empleado (nuevo o editado)

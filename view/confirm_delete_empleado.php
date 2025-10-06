@@ -1,11 +1,10 @@
-<?php require __DIR__ . '/template/header.php'; ?>
 <?php
   // Toma los datos del empleado que vienen del controlador.
   // $dataToView['data'] contiene el empleado a eliminar.
   $emp = $dataToView['data'] ?? null; 
 
   // Si no encuentra datos del empleado...
-  if (!$emp) { 
+  if (!$emp) {
 ?>
   <!-- Muestra un mensaje de error en un alert de Bootstrap -->
   <div class="alert alert-danger">No se encontró el empleado a eliminar.</div>
@@ -14,8 +13,8 @@
 <?php
   // Incluye el footer y corta la ejecución de la vista
   require __DIR__ . '/template/footer.php';
-  return; 
-}
+  exit; 
+  }
 ?>
 
 <!-- Contenedor central (fila centrada) -->
@@ -78,5 +77,3 @@
     </div>
   </div>
 </div>
-
-<?php require __DIR__ . '/template/footer.php'; ?>
