@@ -6,15 +6,16 @@ $titleFromCtrl =
 ?>
 <!doctype html>
 <html lang="es">
-  
+
 <head>
   <meta charset="utf-8">
   <!-- El título dinámico de la página -->
   <title><?= htmlspecialchars($titleFromCtrl) ?></title>
 
   <!-- Importa Bootstrap desde CDN, Si no podemos crear un archivo con estilos css por que esto puede cambiar en algun momento-->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
-<body>
 
+<body>
+  <h3 class="text-center m-0"><?= htmlspecialchars($titleFromCtrl) ?></h3>

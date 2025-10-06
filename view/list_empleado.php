@@ -8,7 +8,6 @@ $pageTitle = $controllerObj->page_title ?? 'Listado de empleados';
 <div class="container mt-3">
   <!-- Encabezado con título y botón para crear nuevo empleado -->
   <div class="d-flex justify-content-between align-items-center mb-3">
-    <h3 class="m-0"><?= htmlspecialchars($pageTitle) ?></h3>
     <!-- Botón que redirige al formulario de alta (empleadoController->edit sin ID) -->
     <a href="index.php?controller=empleado&action=edit" class="btn btn-primary">➕ Nuevo empleado</a>
   </div>
